@@ -71,6 +71,8 @@ long long int houseRobber(vector<int>& valueInHouse)
         if(i != n-1)  excludinglast.push_back(valueInHouse[i]);
     }
 
+    // vector<long long> dp1(n-1,-1), dp2(n-1,-1);
+    // return max(memoization(n-2,excludingfirst,dp1), memoization(n-2,excludinglast, dp2));
     return max(tabulation(excludingfirst), tabulation(excludinglast));
     // return max(optimal(excludingfirst), optimal(excludinglast));
 }
